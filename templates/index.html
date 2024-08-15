@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>image input</title>
+
+    <style>
+        .main{
+            display: flex ;
+            border: 1vw;
+            background-color: aqua;
+            justify-content: space-around;
+            border-color: black;
+            height: 30vh;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inside">
+            <form action="/predict" method="POST"  enctype="multipart/form-data">
+                <label for="img">Select audio file:</label>
+                <input type="file" id="audio" name="audio">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
