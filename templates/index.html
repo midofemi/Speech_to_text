@@ -8,21 +8,38 @@
     <title>image input</title>
 
     <style>
-        .main{
-            display: flex ;
+        .main {
+            display: flex;
             border: 1vw;
-            background-color: aqua;
+            background-color: rgb(68, 255, 0);
             justify-content: space-around;
             border-color: black;
             height: 30vh;
             align-items: center;
         }
+        
+        .header {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .header div {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div>Department of Homeland Security</div>
+        <div>Science and Technology Directorate</div>
+        <div>Technology Center Division</div>
+        <div>Advanced Computing Branch</div>
+        <div>AI/ML Team</div>
+    </div>
     <div class="main">
         <div class="inside">
-            <form action="/predict" method="POST"  enctype="multipart/form-data">
+            <form action="/predict" method="POST" enctype="multipart/form-data">
                 <label for="img">Select audio file:</label>
                 <input type="file" id="audio" name="audio">
                 <input type="submit" value="submit">

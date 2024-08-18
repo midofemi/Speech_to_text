@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
-
+"""
+This folder was used to create our necessary folder structure and ncessary .py needed for our project. As you can see, every other folder created
+is done within a folder called STT. So we want our code to treat all the folders inside STT as a python package. We will have to make STT as a 
+python package as well and that was done with setup.py
+"""
 list_of_files = [
     f"STT/__init__.py",
     f"STT/cloud_storage/__init__.py",

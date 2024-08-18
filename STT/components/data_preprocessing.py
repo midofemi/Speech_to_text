@@ -39,7 +39,7 @@ class DataPreprocessing():
                     id = line.strip().split("|")[0]
                     text = line.strip().split("|")[2]
                     self.id_to_text[id] = text
-            
+
             os.makedirs(self.data_preprocessing_config.metadata_dir_path, exist_ok=True)
 
             

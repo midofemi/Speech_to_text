@@ -38,15 +38,19 @@ def predictroute():
     wave_sounds_path = config.wave_sounds_path
     audio.save(wave_sounds_path)
 
-    app_artifacts = config.app_artifacts
-    os.makedirs(app_artifacts, exist_ok=True)
+    # Here, you should fetch or input the reference text. For simplicity, let's assume it's inputted via a form.
+    reference_text = 'This is the ground truth transcription of the audio.'
 
     if request.method == 'POST':
-
-        pred = Prediction(wave_sounds_path, config.model_download_path)
-        result = pred.prediction()
+        pred = Prediction(wave_sounds_path, config.model_download_path, reference_text)
+        predicted_text, wer = pred.prediction()
         
-        return render_template('result.html', Result = result)
+        result = {
+            "predicted_text": predicted_text,
+            "word_error_rate": wer
+        }
+        
+        return render_template('result.html', Result=result)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)

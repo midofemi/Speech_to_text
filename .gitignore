@@ -3,7 +3,9 @@ data
 demo.py
 artifacts
 prediction_artifacts
-
+Gude.docx
+guide.txt
+STT/datasets
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -137,3 +139,8 @@ dmypy.json
 
 
 STT/datasets
+
+SpeechToTextTransformersColab
+original code
+speech_to_text.pem
+scripts

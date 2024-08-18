@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Image</title>
+    <title>Prediction Result</title>
 </head>
 <body>
- <center>{{ Result }}</center>
+    <center>
+        <h1>Speech-to-Text Prediction Result</h1>
+        <p><strong>Predicted Text:</strong> {{ Result['predicted_text'] }}</p>
+        <p><strong>Word Error Rate (WER):</strong> {{ Result['word_error_rate'] }}</p>
+        <a href="/">Go Back</a>
+    </center>
 </body>
 </html>

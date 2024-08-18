@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM python:3.7
 
 RUN apt update -y && pip3 --no-cache-dir install --upgrade awscli
 
